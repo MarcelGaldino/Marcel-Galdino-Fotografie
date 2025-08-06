@@ -1,97 +1,99 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Marcel Galdino Fotografie</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #000;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .contact {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .contact a {
-      color: #000;
-      text-decoration: none;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 0 2rem 3rem 2rem;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      background: #ccc;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #222;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Galdino Fotografie</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: #fdfbf7 url('IMG_5063.png') no-repeat center center fixed;
+            background-size: 600px;
+        }
+        header {
+            text-align: center;
+            padding: 30px;
+        }
+        header img {
+            height: 100px;
+        }
+        h1 {
+            margin: 10px 0;
+            font-size: 2em;
+        }
+        p.tagline {
+            font-size: 1.2em;
+            font-style: italic;
+            margin: 0;
+        }
+        .intro {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            margin: 10px;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            background: rgba(255,255,255,0.8);
+            margin-top: 30px;
+        }
+        .note {
+            text-align: center;
+            font-weight: bold;
+            background: rgba(255, 230, 150, 0.8);
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="IMG_5063.png" alt="Marcel Galdino Logo">
+        <h1>Marcel Galdino Fotografie</h1>
+        <p class="tagline">„Momente für die Ewigkeit festgehalten“</p>
+    </header>
 
-  <header>
-    <h1>Marcel Galdino Fotografie</h1>
-    <p>Portfolio & Impressionen</p>
-  </header>
+    <div class="note">
+        Diese Seite befindet sich derzeit im Aufbau.
+    </div>
 
-  <section class="contact">
-    <p>📧 <a href="mailto:m.galdino@web.de">m.galdino@web.de</a></p>
-    <p>📸 Instagram: <a href="https://instagram.com/marcel_galdino_fotografie" target="_blank">@marcel_galdino_fotografie</a></p>
-  </section>
+    <div class="intro">
+        <p>
+            Ich bin professioneller Fotograf aus Leidenschaft – spezialisiert auf Hochzeiten, 
+            Newborn‑Shootings, Familienportraits und individuelle Fotoprojekte. 
+            Mein Ziel ist es, echte Emotionen und einzigartige Augenblicke authentisch festzuhalten.
+        </p>
+    </div>
 
-  <h2>Hochzeiten</h2>
-  <section class="gallery">
-    <img src="https://via.placeholder.com/600x400?text=Hochzeit+1" alt="Hochzeit 1">
-    <img src="https://via.placeholder.com/600x400?text=Hochzeit+2" alt="Hochzeit 2">
-    <img src="https://via.placeholder.com/600x400?text=Hochzeit+3" alt="Hochzeit 3">
-  </section>
+    <div class="gallery">
+        <img src="https://picsum.photos/400/300?random=1" alt="Hochzeit Beispiel">
+        <img src="https://picsum.photos/400/300?random=2" alt="Newborn Beispiel">
+        <img src="https://picsum.photos/400/300?random=3" alt="Portrait Beispiel">
+        <img src="https://picsum.photos/400/300?random=4" alt="Outdoor Beispiel">
+    </div>
 
-  <h2>Newborn-Shootings</h2>
-  <section class="gallery">
-    <img src="https://via.placeholder.com/600x400?text=Newborn+1" alt="Newborn 1">
-    <img src="https://via.placeholder.com/600x400?text=Newborn+2" alt="Newborn 2">
-    <img src="https://via.placeholder.com/600x400?text=Newborn+3" alt="Newborn 3">
-  </section>
-
-  <h2>Weitere Shootings</h2>
-  <section class="gallery">
-    <img src="https://via.placeholder.com/600x400?text=Shooting+1" alt="Shooting 1">
-    <img src="https://via.placeholder.com/600x400?text=Shooting+2" alt="Shooting 2">
-    <img src="https://via.placeholder.com/600x400?text=Shooting+3" alt="Shooting 3">
-  </section>
-
-  <footer>
-    © Marcel Galdino Fotografie
-  </footer>
-
+    <footer>
+        Kontakt: <a href="mailto:m.galdino@web.de">m.galdino@web.de</a> | 
+        Instagram: <a href="https://instagram.com/marcel_galdino_fotografie">@marcel_galdino_fotografie</a>
+    </footer>
 </body>
 </html>
+
 
