@@ -1,156 +1,94 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcel Galdino Fotografie</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('IMG_5063.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #2e2e2e;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header img {
-      width: 200px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-    }
-
-    .notice {
-      background: rgba(255,255,255,0.9);
-      margin: 1rem auto;
-      padding: 1rem;
-      width: 80%;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 1.2rem;
-    }
-
-    .gallery-section {
-      background: rgba(255,255,255,0.95);
-      padding: 2rem 1rem;
-    }
-
-    .gallery-section h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: 300px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .contact-form {
-      background: rgba(255,255,255,0.95);
-      padding: 2rem;
-      width: 90%;
-      max-width: 600px;
-      margin: 2rem auto;
-      border-radius: 10px;
-    }
-
-    .contact-form h2 {
-      text-align: center;
-    }
-
-    .contact-form form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact-form input, .contact-form textarea {
-      margin: 0.5rem 0;
-      padding: 0.8rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .contact-form button {
-      padding: 0.8rem;
-      background: #8b5e3c;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.8);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Galdino Fotografie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="IMG_5063.png" alt="Marcel Galdino Logo">
-    <h1>Marcel Galdino Fotografie</h1>
-  </header>
+    <!-- Hintergrund-Wasserzeichen -->
+    <div class="watermark"></div>
 
-  <div class="notice">
-    Diese Webseite befindet sich im Aufbau. Bald folgen neue Inhalte und Funktionen.
-  </div>
+    <!-- Header -->
+    <header>
+        <img src="IMG_5063.png" alt="Logo Marcel Galdino Fotografie" class="logo">
+        <nav>
+            <a href="#hochzeiten">Hochzeiten</a>
+            <a href="#newborn">Newborn</a>
+            <a href="#portrait">Portrait/Familie</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#kalender">Buchung</a>
+        </nav>
+    </header>
 
-  <section class="gallery-section">
-    <h2>Hochzeiten</h2>
-    <div class="gallery">
-      <img src="bilder/hochzeit1.jpg" alt="Hochzeit 1">
-      <img src="bilder/hochzeit2.jpg" alt="Hochzeit 2">
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Willkommen bei Marcel Galdino Fotografie</h1>
+        <p>Emotionen für die Ewigkeit – in einzigartigen Bildern festgehalten.</p>
+    </section>
 
-    <h2>Newbornshootings</h2>
-    <div class="gallery">
-      <img src="bilder/newborn1.jpg" alt="Newborn 1">
-      <img src="bilder/newborn3.JPG" alt="Newborn 2">
-    </div>
+    <!-- Galerie Hochzeiten -->
+    <section id="hochzeiten">
+        <h2>Hochzeiten</h2>
+        <p>Jede Hochzeit erzählt eine einzigartige Liebesgeschichte. Ich fange die besonderen Momente ein – vom ersten Blick bis zum letzten Tanz.</p>
+        <div class="gallery">
+            <img src="https://picsum.photos/400/300?random=1" alt="Hochzeit Beispiel 1">
+            <img src="https://picsum.photos/400/300?random=2" alt="Hochzeit Beispiel 2">
+            <img src="https://picsum.photos/400/300?random=3" alt="Hochzeit Beispiel 3">
+        </div>
+    </section>
 
-    <h2>Familien Shootings</h2>
-    <div class="gallery">
-      <img src="bilder/shooting1.JPG" alt="Shooting 1">
-      <img src="bilder/shooting2.JPG" alt="Shooting 2">
-    </div>
-  </section>
+    <!-- Galerie Newborn -->
+    <section id="newborn">
+        <h2>Newborn</h2>
+        <p>Die ersten Tage im Leben eines Kindes sind voller Magie. Mit viel Geduld und Feingefühl halte ich diese unvergesslichen Momente fest.</p>
+        <div class="gallery">
+            <img src="https://picsum.photos/400/300?random=4" alt="Newborn Beispiel 1">
+            <img src="https://picsum.photos/400/300?random=5" alt="Newborn Beispiel 2">
+            <img src="https://picsum.photos/400/300?random=6" alt="Newborn Beispiel 3">
+        </div>
+    </section>
 
-  <section class="contact-form">
-    <h2>Kontaktformular</h2>
-    <form action="mailto:m.galdino@web.de" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Ihr Name" required>
-      <input type="email" name="Email" placeholder="Ihre E-Mail-Adresse" required>
-      <textarea name="Nachricht" rows="5" placeholder="Ihre Nachricht" required></textarea>
-      <button type="submit">Senden</button>
-    </form>
-  </section>
+    <!-- Galerie Portrait/Familie -->
+    <section id="portrait">
+        <h2>Portrait & Familie</h2>
+        <p>Individuelle Portraits und liebevolle Familienbilder, die echte Emotionen zeigen und für immer bleiben.</p>
+        <div class="gallery">
+            <img src="https://picsum.photos/400/300?random=7" alt="Portrait Beispiel 1">
+            <img src="https://picsum.photos/400/300?random=8" alt="Portrait Beispiel 2">
+            <img src="https://picsum.photos/400/300?random=9" alt="Portrait Beispiel 3">
+        </div>
+    </section>
 
-  <footer>
-    © 2023-2025 Marcel Galdino Fotografie – Kontakt: <a href="mailto:m.galdino@web.de">m.galdino@web.de</a> |
-    
-         Instagram: <a href="https://instagram.com/marcel_galdino_fotografie">@marcel_galdino_fotografie</a>
+    <!-- Kontaktformular -->
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Ihr Name" required>
+            <input type="email" name="_replyto" placeholder="Ihre E-Mail" required>
+            <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+            <button type="submit">Nachricht senden</button>
+        </form>
+    </section>
+
+    <!-- Buchungskalender -->
+    <section id="kalender">
+        <h2>Buchungskalender</h2>
+        <p>Hier können Sie bald direkt Ihren Termin buchen:</p>
+        <div class="calendar-placeholder">
+            <p>📅 Kalender wird bald freigeschaltet</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Marcel Galdino Fotografie</p>
+        <p>Instagram: <a href="https://instagram.com/marcel_galdino_fotografie" target="_blank">@Marce_Galdino_Fotografie</a></p>
     </footer>
 </body>
 </html>
+
 
 
 
