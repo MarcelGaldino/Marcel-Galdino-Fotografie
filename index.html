@@ -176,7 +176,42 @@
       text-decoration:none;
       font-weight:700;
     }
+.contact-form{
+  max-width:620px;
+  margin-top:40px;
+  background:var(--white);
+  padding:40px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
 
+.form-group{
+  margin-bottom:22px;
+}
+
+label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+  color:var(--brown);
+}
+
+input, select, textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,.15);
+  font-family:inherit;
+  font-size:1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  outline:none;
+  border-color:var(--brown);
+}
+    
     @media(max-width:900px){
       .hero{grid-template-columns:1fr}
       .cards,.grid{grid-template-columns:1fr}
@@ -278,16 +313,57 @@
 <!-- KONTAKT -->
 <section id="kontakt">
   <h2>Anfrage</h2>
-  <p>
+
+  <p style="max-width:620px;">
     Wenn du das Gefühl hast, dass meine Art zu fotografieren zu euch passt,
-    freue ich mich über deine Nachricht.
+    schreib mir gerne ein paar Zeilen.
+    <br><br>
+    Ihr müsst noch nichts genau wissen –
+    ein erstes Gefühl reicht völlig aus.
   </p>
 
-  <a class="btn" href="mailto:m.galdino@web.de">Anfrage senden</a>
+  <form action="https://formsubmit.co/m.galdino@web.de" method="POST" class="contact-form">
 
-  <p style="margin-top:16px;font-size:.9rem;">
-    Unverbindlich · persönlich · ohne Verpflichtung
-  </p>
+    <!-- Schutz vor Spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
+
+    <div class="form-group">
+      <label>Dein Name</label>
+      <input type="text" name="Name" required>
+    </div>
+
+    <div class="form-group">
+      <label>E-Mail-Adresse</label>
+      <input type="email" name="Email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Worum geht es?</label>
+      <select name="Art des Shootings" required>
+        <option value="">Bitte auswählen</option>
+        <option>Familienshooting</option>
+        <option>Paarshooting</option>
+        <option>Newbornshooting</option>
+        <option>Hochzeit</option>
+        <option>Sonstiges</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Erzähl mir kurz, was ihr euch wünscht</label>
+      <textarea name="Nachricht" rows="4" placeholder="z. B. wann, wo oder was euch wichtig ist"></textarea>
+    </div>
+
+    <button type="submit" class="btn">
+      Anfrage senden
+    </button>
+
+    <p style="margin-top:14px;font-size:.9rem;opacity:.75;">
+      Persönlich · unverbindlich · Antwort innerhalb von 48 Stunden
+    </p>
+
+  </form>
 </section>
 
 <footer>
