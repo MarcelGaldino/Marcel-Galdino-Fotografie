@@ -3,111 +3,184 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marcel Galdino – Familien & Paarfotograf</title>
-  <meta name="description" content="Familien- & Paarfotografie in Bad Neuenahr. Ruhig geführte Shootings ohne Posenzwang – für Menschen, die sich vor der Kamera wohlfühlen wollen.">
+  <title>Marcel Galdino Fotografie | Familien & Paare</title>
+
+  <meta name="description" content="Familien- & Paarfotografie in Bad Neuenahr. Ruhig geführte, hochwertige Shootings ohne Posenzwang – herzlich, zeitlos und professionell.">
 
   <style>
     :root{
-      --bg:#faf7f2;
-      --bg-soft:#fffaf4;
-      --beige:#e8dccb;
-      --brown:#6d5c4a;
-      --text:#3a332c;
+      --bg:#f6f3ef;
+      --bg-soft:#fbf9f6;
+      --beige:#e4d8c8;
+      --brown:#5f5245;
+      --text:#2f2a25;
       --white:#ffffff;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
-      --radius:16px;
+      --shadow:0 14px 40px rgba(0,0,0,.08);
+      --radius:18px;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color:var(--text);
       background:linear-gradient(180deg,var(--bg),var(--bg-soft));
-      line-height:1.6;
-    }
-    section{max-width:1100px;margin:60px auto;padding:0 20px}
-    h1,h2{line-height:1.2}
-    .btn{
-      background:var(--brown);
-      color:white;
-      padding:12px 20px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      display:inline-block;
-      box-shadow:var(--shadow);
+      line-height:1.7;
     }
 
     header{
-      position:sticky;top:0;
-      background:rgba(250,247,242,.9);
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(246,243,239,.95);
       backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(0,0,0,.05);
+      border-bottom:1px solid rgba(0,0,0,.06);
     }
+
     .nav{
-      max-width:1100px;
-      margin:auto;
-      padding:12px 20px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:14px 24px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
+      justify-content:space-between;
     }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      letter-spacing:.3px;
+    }
+
+    .brand img{
+      height:44px;
+    }
+
     nav a{
-      margin-left:16px;
+      margin-left:22px;
       text-decoration:none;
       color:var(--text);
       font-weight:600;
+      opacity:.85;
     }
+
+    nav a:hover{opacity:1}
+
+    section{
+      max-width:1200px;
+      margin:90px auto;
+      padding:0 24px;
+    }
+
+    h1,h2,h3{
+      font-weight:700;
+      letter-spacing:.2px;
+      line-height:1.25;
+    }
+
+    h1{font-size:clamp(34px,4vw,48px)}
+    h2{font-size:clamp(26px,3vw,34px)}
 
     .hero{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:32px;
+      grid-template-columns:1.15fr .85fr;
+      gap:60px;
       align-items:center;
     }
+
     .hero-box{
-      background:white;
-      padding:32px;
+      background:var(--white);
+      padding:46px;
       border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
-    .tagline{color:var(--brown);font-weight:600}
+
+    .hero .tagline{
+      color:var(--brown);
+      font-weight:600;
+      margin:14px 0 26px;
+      font-size:1.1rem;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:26px;
+      padding:14px 28px;
+      border-radius:999px;
+      background:var(--brown);
+      color:var(--white);
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:var(--shadow);
+    }
+
+    .hero img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
 
     .cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:16px;
+      gap:28px;
+      margin-top:40px;
     }
+
     .card{
-      background:white;
-      padding:20px;
+      background:var(--white);
+      padding:34px;
       border-radius:var(--radius);
       box-shadow:var(--shadow);
+    }
+
+    .card strong{
+      display:block;
+      margin-bottom:10px;
+      color:var(--brown);
+      font-size:1.05rem;
     }
 
     .grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:12px;
+      gap:18px;
+      margin-top:40px;
     }
+
     .grid img{
       width:100%;
-      height:260px;
+      height:280px;
       object-fit:cover;
-      border-radius:14px;
+      border-radius:16px;
       box-shadow:var(--shadow);
     }
 
     footer{
+      margin-top:120px;
+      padding:40px 24px;
       text-align:center;
-      padding:30px 20px;
-      font-size:.9rem;
+      font-size:.95rem;
       color:var(--brown);
+      background:var(--bg-soft);
+      border-top:1px solid rgba(0,0,0,.05);
+    }
+
+    footer a{
+      color:var(--brown);
+      text-decoration:none;
+      font-weight:700;
     }
 
     @media(max-width:900px){
       .hero{grid-template-columns:1fr}
       .cards,.grid{grid-template-columns:1fr}
+      nav{display:none}
     }
   </style>
 </head>
@@ -116,9 +189,13 @@
 
 <header>
   <div class="nav">
-    <strong>Marcel Galdino Fotografie</strong>
+    <div class="brand">
+      <img src="IMG_5063.png" alt="Marcel Galdino Logo">
+      <span>Marcel Galdino Fotografie</span>
+    </div>
     <nav>
       <a href="#portfolio">Portfolio</a>
+      <a href="#ueber">Über mich</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </div>
@@ -127,43 +204,96 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-box">
-    <h1>Fotografie für Familien & Paare,<br>die sich vor der Kamera wohlfühlen wollen.</h1>
-    <p class="tagline">Ruhig geführt. Ohne Posenzwang. In eurem Tempo.</p>
+    <h1>Fotografie für Familien & Paare,<br>die sich vor der Kamera wohlfühlen möchten.</h1>
+
+    <p class="tagline">
+      Ruhig geführt · herzlich · zeitlos
+    </p>
 
     <p>
-      Viele Menschen fühlen sich vor der Kamera unsicher oder „nicht fotogen“.
-      Genau darauf ist meine Art zu fotografieren ausgerichtet.
+      Viele Menschen wünschen sich schöne Bilder –  
+      und fühlen sich gleichzeitig unsicher vor der Kamera.
       <br><br>
+      Genau hier setzt meine Arbeit an.
       Ich begleite euch ruhig durch das Shooting,
       gebe klare, entspannte Anleitungen
-      und lasse Raum für echte Momente.
+      und schaffe eine Atmosphäre,
+      in der echte Momente entstehen dürfen.
     </p>
 
     <a class="btn" href="#kontakt">Unverbindlich anfragen</a>
   </div>
 
-  <img src="bilder/Familie (1).JPG" alt="Familienmoment" style="width:100%;border-radius:16px;">
+  <img src="bilder/Familie (1).JPG" alt="Familienfotografie">
 </section>
 
 <!-- VERTRAUEN -->
 <section>
-  <h2>So fühlt sich ein Shooting bei mir an</h2>
+  <h2>Was euch bei mir erwartet</h2>
 
   <div class="cards">
     <div class="card">
-      <strong>Ruhige Atmosphäre</strong>
-      <p>Kein Zeitdruck. Kein Vorführen. Kein Stress.</p>
+      <strong>Ruhige Begleitung</strong>
+      <p>Ohne Zeitdruck, ohne Vorführen – mit Raum für echte Nähe.</p>
     </div>
     <div class="card">
-      <strong>Klare, sanfte Führung</strong>
-      <p>Ich zeige euch, was gut funktioniert – ihr müsst nichts wissen.</p>
+      <strong>Klare, professionelle Führung</strong>
+      <p>Ihr müsst nichts wissen oder können. Ich leite euch sicher durch das Shooting.</p>
     </div>
     <div class="card">
-      <strong>Echte Momente</strong>
-      <p>Wenn Druck wegfällt, entsteht Nähe von selbst.</p>
+      <strong>Natürliche Ergebnisse</strong>
+      <p>Bilder, die nicht inszeniert wirken, sondern ehrlich und zeitlos bleiben.</p>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfoli
+<section id="portfolio">
+  <h2>Einblick in meine Arbeit</h2>
+
+  <div class="grid">
+    <img src="bilder/newborn1.JPG" alt="">
+    <img src="bilder/shooting1.JPG" alt="">
+    <img src="bilder/Familie (2).JPG" alt="">
+    <img src="bilder/hochzeit1.jpg" alt="">
+    <img src="bilder/shooting2.JPG" alt="">
+    <img src="bilder/newborn2.JPG" alt="">
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section id="ueber">
+  <h2>Über mich</h2>
+  <p>
+    Ich bin Marcel, Familien- und Paarfotograf aus Bad Neuenahr.
+    <br><br>
+    Meine Arbeit ist ruhig, aufmerksam und professionell.
+    Mir ist wichtig, dass ihr euch vor meiner Kamera sicher fühlt –
+    und euch nicht verstellen müsst.
+    <br><br>
+    So entstehen Bilder, die auch Jahre später noch stimmig sind.
+  </p>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <h2>Anfrage</h2>
+  <p>
+    Wenn du das Gefühl hast, dass meine Art zu fotografieren zu euch passt,
+    freue ich mich über deine Nachricht.
+  </p>
+
+  <a class="btn" href="mailto:m.galdino@web.de">Anfrage senden</a>
+
+  <p style="margin-top:16px;font-size:.9rem;">
+    Unverbindlich · persönlich · ohne Verpflichtung
+  </p>
+</section>
+
+<footer>
+  © 2025 Marcel Galdino Fotografie · Bad Neuenahr<br>
+  <a href="https://instagram.com/marcel_galdino_fotografie" target="_blank">Instagram</a>
+</footer>
+
+</body>
+</html>
