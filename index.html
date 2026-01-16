@@ -1,375 +1,105 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marcel Galdino Fotografie | Familien & Paare</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcel Galdino Fotografie</title>
+<meta name="description" content="Natürliche, zeitlose Fotografie für Familien, Paare & Newborns – ruhig, geführt und echt.">
 
-  <meta name="description" content="Familien- & Paarfotografie in Bad Neuenahr. Ruhig geführte, hochwertige Shootings ohne Posenzwang – herzlich, zeitlos und professionell.">
+<style>
+:root{
+  --bg:#faf7f2;
+  --bg-soft:#fffaf4;
+  --beige:#e8dccb;
+  --brown:#6d5c4a;
+  --text:#3a332c;
+  --white:#ffffff;
+  --shadow:0 10px 30px rgba(0,0,0,.06);
+  --radius:16px;
+}
 
-  <style>
-    :root{
-      --bg:#f6f3ef;
-      --bg-soft:#fbf9f6;
-      --beige:#e4d8c8;
-      --brown:#5f5245;
-      --text:#2f2a25;
-      --white:#ffffff;
-      --shadow:0 14px 40px rgba(0,0,0,.08);
-      --radius:18px;
-    }
+*{box-sizing:border-box}
 
-    *{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:linear-gradient(180deg,var(--bg),var(--bg-soft));
+  color:var(--text);
+  line-height:1.6;
+}
 
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background:linear-gradient(180deg,var(--bg),var(--bg-soft));
-      line-height:1.7;
-    }
+header{
+  position:sticky;
+  top:0;
+  background:rgba(250,247,242,.9);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.05);
+  z-index:10;
+}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:rgba(246,243,239,.95);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(0,0,0,.06);
-    }
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    .nav{
-      max-width:1200px;
-      margin:0 auto;
-      padding:14px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:inherit;
+  font-weight:700;
+}
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:700;
-      letter-spacing:.3px;
-    }
+.brand img{height:42px}
 
-    .brand img{
-      height:44px;
-    }
+nav a{
+  margin-left:16px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+}
 
-    nav a{
-      margin-left:22px;
-      text-decoration:none;
-      color:var(--text);
-      font-weight:600;
-      opacity:.85;
-    }
+.hero{
+  max-width:1100px;
+  margin:80px auto 40px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+}
 
-    nav a:hover{opacity:1}
-
-    section{
-      max-width:1200px;
-      margin:90px auto;
-      padding:0 24px;
-    }
-
-    h1,h2,h3{
-      font-weight:700;
-      letter-spacing:.2px;
-      line-height:1.25;
-    }
-
-    h1{font-size:clamp(34px,4vw,48px)}
-    h2{font-size:clamp(26px,3vw,34px)}
-
-    .hero{
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:60px;
-      align-items:center;
-    }
-
-    .hero-box{
-      background:var(--white);
-      padding:46px;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-
-    .hero .tagline{
-      color:var(--brown);
-      font-weight:600;
-      margin:14px 0 26px;
-      font-size:1.1rem;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:26px;
-      padding:14px 28px;
-      border-radius:999px;
-      background:var(--brown);
-      color:var(--white);
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:var(--shadow);
-    }
-
-    .hero img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:28px;
-      margin-top:40px;
-    }
-
-    .card{
-      background:var(--white);
-      padding:34px;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-
-    .card strong{
-      display:block;
-      margin-bottom:10px;
-      color:var(--brown);
-      font-size:1.05rem;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:40px;
-    }
-
-    .grid img{
-      width:100%;
-      height:280px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:var(--shadow);
-    }
-
-    footer{
-      margin-top:120px;
-      padding:40px 24px;
-      text-align:center;
-      font-size:.95rem;
-      color:var(--brown);
-      background:var(--bg-soft);
-      border-top:1px solid rgba(0,0,0,.05);
-    }
-
-    footer a{
-      color:var(--brown);
-      text-decoration:none;
-      font-weight:700;
-    }
-.contact-form{
-  max-width:620px;
-  margin-top:40px;
+.hero-card{
   background:var(--white);
   padding:40px;
   border-radius:var(--radius);
   box-shadow:var(--shadow);
 }
 
-.form-group{
-  margin-bottom:22px;
+.hero h1{
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.15;
+  margin:0 0 12px;
 }
 
-label{
-  display:block;
-  margin-bottom:6px;
-  font-weight:600;
-  color:var(--brown);
+.hero p{
+  margin:0 0 16px;
 }
 
-input, select, textarea{
-  width:100%;
-  padding:12px 14px;
-  border-radius:10px;
-  border:1px solid rgba(0,0,0,.15);
-  font-family:inherit;
-  font-size:1rem;
+.btn{
+  display:inline-block;
+  margin-top:14px;
+  padding:12px 22px;
+  border-radius:999px;
+  background:var(--brown);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
-  outline:none;
-  border-color:var(--brown);
-}
-    
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .cards,.grid{grid-template-columns:1fr}
-      nav{display:none}
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="nav">
-    <div class="brand">
-      <img src="IMG_5063.png" alt="Marcel Galdino Logo">
-      <span>Marcel Galdino Fotografie</span>
-    </div>
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#ueber">Über mich</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-box">
-    <h1>Fotografie für Familien & Paare,<br>die sich vor der Kamera wohlfühlen möchten.</h1>
-
-    <p class="tagline">
-      Ruhig geführt · herzlich · zeitlos
-    </p>
-
-    <p>
-      Viele Menschen wünschen sich schöne Bilder –  
-      und fühlen sich gleichzeitig unsicher vor der Kamera.
-      <br><br>
-      Genau hier setzt meine Arbeit an.
-      Ich begleite euch ruhig durch das Shooting,
-      gebe klare, entspannte Anleitungen
-      und schaffe eine Atmosphäre,
-      in der echte Momente entstehen dürfen.
-    </p>
-
-    <a class="btn" href="#kontakt">Unverbindlich anfragen</a>
-  </div>
-
-  <img src="bilder/Familie (1).JPG" alt="Familienfotografie">
-</section>
-
-<!-- VERTRAUEN -->
-<section>
-  <h2>Was euch bei mir erwartet</h2>
-
-  <div class="cards">
-    <div class="card">
-      <strong>Ruhige Begleitung</strong>
-      <p>Ohne Zeitdruck, ohne Vorführen – mit Raum für echte Nähe.</p>
-    </div>
-    <div class="card">
-      <strong>Klare, professionelle Führung</strong>
-      <p>Ihr müsst nichts wissen oder können. Ich leite euch sicher durch das Shooting.</p>
-    </div>
-    <div class="card">
-      <strong>Natürliche Ergebnisse</strong>
-      <p>Bilder, die nicht inszeniert wirken, sondern ehrlich und zeitlos bleiben.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2>Einblick in meine Arbeit</h2>
-
-  <div class="grid">
-    <img src="bilder/newborn1.JPG" alt="">
-    <img src="bilder/shooting1.JPG" alt="">
-    <img src="bilder/Familie (2).JPG" alt="">
-    <img src="bilder/hochzeit1.jpg" alt="">
-    <img src="bilder/shooting2.JPG" alt="">
-    <img src="bilder/newborn2.JPG" alt="">
-  </div>
-</section>
-
-<!-- ÜBER MICH -->
-<section id="ueber">
-  <h2>Über mich</h2>
-  <p>
-    Ich bin Marcel, Familien- und Paarfotograf aus Bad Neuenahr.
-    <br><br>
-    Meine Arbeit ist ruhig, aufmerksam und professionell.
-    Mir ist wichtig, dass ihr euch vor meiner Kamera sicher fühlt –
-    und euch nicht verstellen müsst.
-    <br><br>
-    So entstehen Bilder, die auch Jahre später noch stimmig sind.
-  </p>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt">
-  <h2>Anfrage</h2>
-
-  <p style="max-width:620px;">
-    Wenn du das Gefühl hast, dass meine Art zu fotografieren zu euch passt,
-    schreib mir gerne ein paar Zeilen.
-    <br><br>
-    Ihr müsst noch nichts genau wissen –
-    ein erstes Gefühl reicht völlig aus.
-  </p>
-
-  <form action="https://formsubmit.co/m.galdino@web.de" method="POST" class="contact-form">
-
-    <!-- Schutz vor Spam -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
-
-    <div class="form-group">
-      <label>Dein Name</label>
-      <input type="text" name="Name" required>
-    </div>
-
-    <div class="form-group">
-      <label>E-Mail-Adresse</label>
-      <input type="email" name="Email" required>
-    </div>
-
-    <div class="form-group">
-      <label>Worum geht es?</label>
-      <select name="Art des Shootings" required>
-        <option value="">Bitte auswählen</option>
-        <option>Familienshooting</option>
-        <option>Paarshooting</option>
-        <option>Newbornshooting</option>
-        <option>Hochzeit</option>
-        <option>Sonstiges</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label>Erzähl mir kurz, was ihr euch wünscht</label>
-      <textarea name="Nachricht" rows="4" placeholder="z. B. wann, wo oder was euch wichtig ist"></textarea>
-    </div>
-
-    <button type="submit" class="btn">
-      Anfrage senden
-    </button>
-
-    <p style="margin-top:14px;font-size:.9rem;opacity:.75;">
-      Persönlich · unverbindlich · Antwort innerhalb von 48 Stunden
-    </p>
-
-  </form>
-</section>
-
-<footer>
-  © 2025 Marcel Galdino Fotografie · Bad Neuenahr<br>
-  <a href="https://instagram.com/marcel_galdino_fotografie" target="_blank">Instagram</a>
-</footer>
-
-</body>
-</html>
+.hero-visual{
+  background:linear-gradient(160deg,var(--beige),var
